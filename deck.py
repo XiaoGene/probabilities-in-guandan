@@ -35,6 +35,12 @@ class Deck(object):
                       'diamonds': diamonds, 'clubs': clubs, 'jokers': jokers}
         return cards_dict
 
+    def collapse(self, cards_dict):
+        cards_dict['hearts'] -= 26
+        cards_dict['diamonds'] -= 52
+        cards_dict['clubs'] -= 78
+        return cards_dict
+
     def sort(self, cards):
         return np.sort(cards)
 
