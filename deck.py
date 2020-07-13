@@ -31,7 +31,9 @@ class Deck(object):
         diamonds = cards[(cards >= 53) * (cards <= 78)]
         clubs = cards[(cards >= 79) * (cards <= 104)]
         jokers = cards[(cards >= 105) * (cards <= 106)]
-        return [spades, hearts, diamonds, clubs, jokers]
+        cards_dict = {'spades': spades, 'hearts': hearts,
+                      'diamonds':diamonds, 'clubs': clubs, 'jokers': jokers}
+        return cards_dict
 
     def sort(self, cards):
         return np.sort(cards)

@@ -14,8 +14,8 @@ def main():
     cards = d.draw_cards()
     cards = d.reduce(cards)
     cards = d.sort(cards)
-    cards_list = d.separate(cards)
-
+    cards_dict = d.separate(cards)
+    print(cards_dict)
 
 if __name__ == '__main__':
     np.set_printoptions(precision=3, linewidth=1000, suppress=False)
