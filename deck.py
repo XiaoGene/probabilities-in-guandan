@@ -30,13 +30,16 @@ class Deck(object):
         hearts = cards[(cards >= 27) * (cards <= 52)]
         diamonds = cards[(cards >= 53) * (cards <= 78)]
         clubs = cards[(cards >= 79) * (cards <= 104)]
-        jokers = cards[(cards >= 105) * (cards <= 106)]
+        jokers = cards[(cards >= 105) * (cards <= 108)]
         cards_dict = {'spades': spades, 'hearts': hearts,
-                      'diamonds':diamonds, 'clubs': clubs, 'jokers': jokers}
+                      'diamonds': diamonds, 'clubs': clubs, 'jokers': jokers}
         return cards_dict
 
     def sort(self, cards):
         return np.sort(cards)
+
+    def unique(self, cards):
+        return np.unique(cards)
 
     def get_full_deck(self):
         return self.deck
