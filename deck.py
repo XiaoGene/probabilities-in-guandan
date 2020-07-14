@@ -1,5 +1,5 @@
 import numpy as np
-
+import random
 
 class Deck(object):
     def __init__(self):
@@ -12,7 +12,7 @@ class Deck(object):
         self.deck = np.arange(1, 109, 1)
 
     def draw_cards(self, n_cards=27):
-        return np.random.choice(self.deck, n_cards, replace=False)
+        return np.array(random.sample(list(self.deck), n_cards))
 
     def reduce(self, cards):
         # map Spades

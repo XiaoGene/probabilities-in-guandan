@@ -37,7 +37,7 @@ class StraightFlush(Event):
 
 
 def main():
-    n_exp = 100000
+    n_exp = 1000000
     event = StraightFlush()
     simulator = Simulator(event)
     start = time.time()
@@ -45,7 +45,7 @@ def main():
     end = time.time()
     ellapsed_time = end - start
     print('Number of experiments conducted: {}.'.format(n_exp))
-    print('Time taken {:.0f}[min] {:.2f}[s].'.format(ellapsed_time // 60, ellapsed_time % 60))
+    print('Time taken: {:.0f}[min] {:.2f}[s].'.format(ellapsed_time // 60, ellapsed_time % 60))
     print('Probability of having a straight flush at hand: {:.4f}.'.format(prob))
 
 

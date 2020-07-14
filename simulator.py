@@ -1,4 +1,4 @@
-import numpy as np
+import random
 from deck import Deck
 
 
@@ -12,7 +12,7 @@ class Simulator(object):
         self.event = event
 
     def set_seed(self, seed=0):
-        np.random.seed(seed)
+        random.seed(seed)
 
     def simulate(self, n_exp=10):
         n_positive = 0
