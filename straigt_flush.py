@@ -39,9 +39,9 @@ class StraightFlush(Event):
 def main():
     n_exp = 1000000
     event = StraightFlush()
-    simulator = Simulator(event)
+    simulator = Simulator(event, n_exp)
     start = time.time()
-    prob = simulator.simulate(n_exp)
+    prob = simulator.simulate()
     end = time.time()
     ellapsed_time = end - start
     print('Number of experiments conducted: {}.'.format(n_exp))
