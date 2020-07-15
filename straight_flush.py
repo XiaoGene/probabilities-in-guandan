@@ -29,7 +29,7 @@ class StraightFlush(Event):
     def is_consecutive(self, array, stepsize=1):
         """ returns true if array is 5-consecutive numbers
         """
-        return (np.diff(array) != stepsize).all()
+        return (np.diff(array) == stepsize).all()
 
     def contain_10jqka(self, suit_cards):
         target_cards = np.array([10, 11, 12, 13, 1])

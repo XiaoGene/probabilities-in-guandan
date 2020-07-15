@@ -12,4 +12,4 @@ python contain_two_spade_ones.py
 ``` python
 python straight_flush.py
 ```
-理论概率未知，模拟100000次的实验概率是0.2437,
+理论概率未知，模拟1000000次的实验概率是0.3128.
